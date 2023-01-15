@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #444343;
+}
+.wrapper{
+    height: 260px;
+    max-width: 410px;
+    border-radius: 10px;
+    padding: 16px 25px 0;
+    background-color: #d3b784;
+    transition: height 0.3s ease;
+}
+.wrapper.active{
+    height: 550px;
+}
+header h1{
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+}
+header p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: black;
+}
+.wrapper .form{
+    margin: 20px 0 30px;
+}
+.form :where(input,button){
+    width: 100%;
+    height: 55px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+.form input{
+    font-size: 16px;
+    padding: 0 17px;
+    border: 1px solid #444343;
+    background-color: #dbd0bc;
+}
+.form button{
+    margin-top: 20px;
+    background-color: #444343;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.form button:hover{
+    background-color: rgb(0, 0, 0);
+}
+.wrapper .qr-code{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 33px 0;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+    border: 1px solid #444343;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
